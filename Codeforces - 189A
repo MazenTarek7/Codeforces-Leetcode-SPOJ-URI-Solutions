@@ -1,0 +1,22 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int n,a,b,c,answer = 0 , temp;
+    float z;
+    scanf("%d%d%d%d",&n,&a,&b,&c);
+    for (int i = 0 ; i < 4001 ; i++){
+        for (int j = 0 ; j < 4001 ; j++){
+            temp = n - (i*a + j*b);
+            if (temp<0)
+                break;
+            z = (temp/(float)c);
+            if (z==(int)z)
+                answer = max(answer,(int)z+j+i);
+        }
+    }
+    printf("%d",answer);
+    return 0;
+}
