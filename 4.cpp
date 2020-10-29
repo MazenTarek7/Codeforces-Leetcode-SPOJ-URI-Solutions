@@ -1,3 +1,4 @@
+// SPOJ - STRHH - Half of the half
 #include<bits/stdc++.h>
 using namespace std;
 int main (){
