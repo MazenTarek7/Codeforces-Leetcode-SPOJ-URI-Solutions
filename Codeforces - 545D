@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    vector <int> v1;
+    int n, t , count = 0 , waitTime = 0;
+    cin >> n;
+    for (int i = 1 ; i <= n ; i++){
+        cin >> t;
+        v1.push_back(t);
+    }
+    sort(v1.begin() , v1.end());
+    
+    for (auto i = v1.begin() ; i != v1.end() ; i++){
+        if (*i >= waitTime ){
+            count++;
+            waitTime = waitTime + *i;
+        }
+    }
+     cout << count;
+    return 0;
+}
