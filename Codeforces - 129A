@@ -1,0 +1,25 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    int bags , cookies[102] , sum = 0 , count = 0;
+    cin >> bags;
+    for (int i = 1 ; i <= bags ; i++){
+       cin >> cookies[i];
+       sum += cookies[i];
+    }
+    for (int i = 1 ; i <= bags ; i++){
+        if (bags == 1){
+            count = 1;
+            break;
+        }
+        else if ((sum - cookies[i]) % 2 == 0){
+           // cout << "Inside else if" << endl;
+            count++;
+        }
+    }
+    cout << count;
+    return 0;
+}
