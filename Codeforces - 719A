@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+ 
+using namespace std;
+ 
+int main()
+{
+    int n,a[100];
+    scanf("%d",&n);
+    for (int i = 1 ; i <= n ; i++){
+        scanf("%d",&a[i]);
+    }
+    if (n == 1 && a[n] != 15 && a[n] != 0 ){
+        printf("%d\n",-1);
+    }
+    if (a[n] == 15){
+        printf("DOWN\n");
+    }
+    if (a[n] == 0){
+        printf("UP\n");
+    }
+    else {
+        if (a[n] - a[n-1] == 1 && a[n] != 15){
+            printf("UP\n");
+        }
+        if (a[n] - a[n-1] == -1){
+            printf("DOWN\n");
+        }
+    }
+    return 0;
+}
