@@ -1,3 +1,4 @@
+// SPOJ - SMPSUM - Iterated sums
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
