@@ -1,3 +1,4 @@
+// SPOJ - PATTERN1 - Simple Pattern !!
 #include<bits/stdc++.h>
 using namespace std;
 int main(){
