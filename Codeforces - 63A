@@ -1,0 +1,39 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+ 
+int main()
+{
+    vector <string> vrats , vmen , vcaptain , vwomen_child;
+    string name , rank;
+    int n;
+    cin >> n;
+    for (int i = 0 ; i < n ; i++){
+        cin >> name >> rank;
+        if (rank == "rat"){
+            vrats.push_back(name);
+        }
+        else if (rank == "woman" || rank == "child"){
+            vwomen_child.push_back(name);
+        }
+        else if (rank == "man"){
+            vmen.push_back(name);
+        }
+        else{
+            vcaptain.push_back(name);
+        }
+    }
+        for (auto i = vrats.begin() ; i != vrats.end() ; i++){
+            cout << *i << endl;
+        }
+        for (auto i = vwomen_child.begin() ; i != vwomen_child.end() ; i++){
+            cout << *i << endl;
+        }
+        for (auto i = vmen.begin() ; i != vmen.end() ; i++){
+            cout << *i << endl;
+        }
+        for (auto i = vcaptain.begin() ; i != vcaptain.end() ; i++){
+            cout << *i << endl;
+        }
+    return 0;
+}
