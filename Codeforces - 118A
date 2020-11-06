@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string word;
+    cin >> word;
+    int length;
+    length = word.size();
+    for (int i = 0; i < length ; i++){
+        if (word[i] >= 65 && word[i] <= 90){
+            word[i] = word[i] + 32;
+        }
+        if (word[i] == 'a' || word[i] == 'o' || word[i] == 'y' || word[i] == 'e' || word[i] == 'u' || word[i] == 'i'){
+           for (int j=i;j<length;j++){
+               word[i] = word[j+1];
+           }
+        }
+        else {
+            cout <<"."<<word[i];
+        }
+    }
+    return 0;
+}
