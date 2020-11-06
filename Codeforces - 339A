@@ -1,0 +1,18 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string word;
+    cin >> word;
+    int length = word.size();
+    for (int i = 0 ; i < length ; i+=2){
+        for (int j = 0 ; j < length - i - 2 ; j+=2){
+            if (word[j] > word[j+2]){
+                swap(word[j],word[j+2]);
+            }
+        }
+    }
+    cout << word << endl;
+    return 0;
+}
