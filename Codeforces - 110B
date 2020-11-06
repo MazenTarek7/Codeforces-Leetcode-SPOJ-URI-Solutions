@@ -1,0 +1,14 @@
+#include <bits/stdc++.h>
+using namespace std;
+ 
+int main()
+{
+    int n , value ;
+    char letter[] = {'a','b','c','d'};
+    cin >> n;
+    for (int i = 0 ; i < n ; i++){
+        value = i % 4;
+        cout << letter[value];
+    }
+    return 0;
+}
