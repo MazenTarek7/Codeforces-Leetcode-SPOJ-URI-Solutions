@@ -1,0 +1,34 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int n;
+    queue <int> q1;
+    while(true)
+    {
+        cin >> n;
+        if(n==0)
+            return 0;
+        for(int i = 1; i <= n; i++)
+        {
+            q1.push(i);
+        }
+        cout<<"Discarded cards:";
+        while(q1.size() > 1)
+        {
+            cout<<" "<<q1.front();
+            q1.pop();
+            int front = q1.front();
+            q1.pop();
+            if(q1.size() >= 1)
+                cout<<',';
+            q1.push(front);
+        }
+        cout<<endl;
+        cout<<"Remaining card: "<<q1.front()<<endl;
+        q1.pop();
+
+    }
+    return 0;
+}
